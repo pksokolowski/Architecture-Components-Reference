@@ -12,4 +12,8 @@ class MainActivityViewModel @Inject constructor(dataRepository: DataRepository):
     fun getContent(): LiveData<String>{
         return content
     }
+
+    fun setContent(text: String){
+        content.value = text
+    }
 }

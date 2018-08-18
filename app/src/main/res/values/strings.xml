@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ArchReference</string>
+    <string name="button_sunday_title">Sunday</string>
+    <string name="button_monday_title">Monday</string>
 </resources>

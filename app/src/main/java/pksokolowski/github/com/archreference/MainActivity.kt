@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainActivityViewModel::class.java)
 
         viewModel.getContent().observe(this, Observer { text_view.text = it ?: "error" })
+
+        button_sunday.setOnClickListener { viewModel.setContent("Sunday") }
+        button_monday.setOnClickListener { viewModel.setContent("Monday") }
     }
 
 }
