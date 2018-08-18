@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class MainActivityViewModel @Inject constructor(dataRepository: DataRepository): ViewModel() {
 
-    val content: MutableLiveData<String> = dataRepository.getData()
+    private val content: MutableLiveData<String> = dataRepository.getData()
 
     fun getContent(): LiveData<String>{
         return content
