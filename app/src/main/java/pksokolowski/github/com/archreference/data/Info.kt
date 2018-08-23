@@ -6,7 +6,8 @@ import android.arch.persistence.room.PrimaryKey
 
 @Entity(tableName = "info")
 data class Info (
-    @PrimaryKey @ColumnInfo(name = "id")
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     val id: Long,
     val content: String
 )

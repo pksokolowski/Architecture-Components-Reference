@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ArchReference</string>
-    <string name="button_sunday_title">Sunday</string>
-    <string name="button_monday_title">Monday</string>
+    <string name="button_sunday_title">commit</string>
+    <string name="text_input_hint">Type new string item</string>
 </resources>

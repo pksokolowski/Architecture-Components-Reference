@@ -6,10 +6,10 @@ import android.arch.persistence.room.RoomDatabase
 @Database(
         entities = [
             Info::class],
-        version = 1,
+        version = 2,
         exportSchema = false
 )
-abstract class GithubDb : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
     abstract fun infoDao(): InfoDao
 }

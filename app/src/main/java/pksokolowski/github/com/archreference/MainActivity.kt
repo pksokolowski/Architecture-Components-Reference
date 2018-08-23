@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
+import pksokolowski.github.com.archreference.data.Info
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -23,10 +24,14 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainActivityViewModel::class.java)
 
-        viewModel.getContent().observe(this, Observer { text_view.text = it ?: "error" })
+        viewModel.getConcatenatedContent().observe(this, Observer {
+            text_view.text = it
+        })
 
-        button_sunday.setOnClickListener { viewModel.setContent("Sunday") }
-        button_monday.setOnClickListener { viewModel.setContent("Monday") }
+        button_sunday.setOnClickListener {
+            val content = text_input.text.toString()
+            viewModel.addContent(content)
+        }
     }
 
 }
